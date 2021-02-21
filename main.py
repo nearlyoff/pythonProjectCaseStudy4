@@ -1,3 +1,8 @@
+# Case-study #4 "Progressive taxation"
+# Developers:   Kremlin V. (60%),
+#               Maslyukova P. (50%),
+#               Zhuravlev. A. (40%)
+
 import local as lc
 from textblob import TextBlob
 
