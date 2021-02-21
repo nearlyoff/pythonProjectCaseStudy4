@@ -13,7 +13,29 @@ for i in text:
     elif 1072 <= ord(i) <= 1103 or 1040 <= ord(i) <= 1071:
         lang_en = True
 
+def syllables_count_english():
+    # Function counts syllables_count in the text for english language.
+    vowels_count = 'euioaEUIOA'
+    syllables_count = 0
+    for _ in text:
+        if vowels_count.find(_) != -1:
+            syllables_count += 1
+    return syllables_count
 
+
+def asl_index_count_english():
+    # Function counts average sentence length for english language.
+    vowels_count = 'euioaEUIOA'
+    syllables_count = 0
+    sentence_count = 0
+    for _ in text:
+        if vowels_count.find(_) != -1:
+            syllables_count += 1
+        words = text.split(' ')
+        words_count = len(words)
+        if _ == '.' or _ == '!' or _ == '?':
+            sentence_count += 1
+    asl = words_count / sentence_count
 def count_syllables_count_rus():
     # Function counts quantity of syllables in the text for russian language.
     syllables_count = 0
